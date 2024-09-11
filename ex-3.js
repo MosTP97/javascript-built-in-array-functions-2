@@ -374,4 +374,10 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+//const billMembers;
+
+function members(mem){
+  return mem.member(member.sname) != null
+}
+const newBills = bills.filter(members);
+console.log(newBills)
