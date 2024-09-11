@@ -374,10 +374,11 @@ const bills = [
 ];
 
 // Start coding here
-//const billMembers;
-
-function members(mem){
-  return mem.member(member.sname) != null
-}
-const newBills = bills.filter(members);
-console.log(newBills)
+const billMembers = bills
+  .filter((bill)=>{ 
+    return bill.member != null;
+  })
+  .map((bill)=> { 
+    return bill.member.name;
+  });
+console.log(billMembers);
